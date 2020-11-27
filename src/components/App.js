@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './styles.module.css';
 
-
 const App = ({ title }) => (
   <div className={styles.app}>
     {title}
