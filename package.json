@@ -45,6 +45,7 @@
     "build": "webpack --config build-utils/webpack.config.js --env env=prod",
     "build:analyze": "yarn build -- --env addon=bundleanalyze",
     "test": "echo \"Error: no test specified\" && exit 0",
+    "lint": "eslint './src/**/*.{js,jsx}'",
     "lint:fix": "eslint './src/**/*.{js,jsx}' --fix"
   },
   "husky": {
