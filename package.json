@@ -4,6 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "private": true,
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
@@ -23,6 +27,7 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
     "html-webpack-plugin": "^4.5.0",
+    "husky": "^4.3.0",
     "jest": "^26.6.3",
     "node-sass": "^5.0.0",
     "postcss-loader": "^4.1.0",
@@ -42,8 +47,10 @@
     "test": "echo \"Error: no test specified\" && exit 0",
     "lint:fix": "eslint './src/**/*.{js,jsx}' --fix"
   },
-  "dependencies": {
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint:fix",
+      "pre-push": "yarn lint"
+    }
   }
 }
