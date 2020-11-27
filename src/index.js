@@ -6,6 +6,6 @@ import App from './components/App';
 const title = 'ReactasdfasdfBabel';
 
 ReactDOM.render(
-  <App title={title}/>,
-  document.getElementById('root')
+  <App title={title} />,
+  document.getElementById('root'),
 );
