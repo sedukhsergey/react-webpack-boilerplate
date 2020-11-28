@@ -28,14 +28,16 @@ module.exports = {
       {
         test: /\.(scss|css)$/,
         use: [
-          { loader: 'style-loader' },
+          'style-loader',
           {
-          loader: 'css-loader',
-          options: {
-            modules: {
-              localIdentName: '[local]___[hash:base64:5]',
-            },
-          },
+            loader: 'css-loader',
+            options: {
+              modules: {
+                compileType: 'module',
+                auto: true,
+                localIdentName: '[local]--[hash:base64:5]',
+              }
+            }
         }, 'postcss-loader', 'sass-loader'],
       },
     ],
