@@ -1,10 +1,9 @@
 import React from 'react';
 import styles from './styles.module.css';
 
-const App = ({ title }) => (
+const App = () => (
   <div className={styles.app}>
-    {title}
-    <h2 className="app">DDDDD</h2>
+    <h2 className="app">My App Component</h2>
   </div>
 );
 
